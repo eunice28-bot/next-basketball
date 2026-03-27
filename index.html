@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mugisha's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor" id="cursor"></div>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-left">
+            <a onclick="showPage('home')" class="nav-link active">🏠 Home</a>
+            <a onclick="showPage('about')" class="nav-link">👤 About Me</a>
+            <a onclick="showPage('websites')" class="nav-link">🌐 Websites</a>
+            <a onclick="showPage('projects')" class="nav-link">💼 Projects</a>
+            <a onclick="showPage('contact')" class="nav-link">📧 Contact</a>
+        </div>
+        
+        <!-- SEARCH BAR -->
+        <div class="search-container">
+            <input type="text" class="search-bar" id="searchInput" placeholder="Search portfolio...">
+            <button class="search-btn" onclick="searchPortfolio()">🔍</button>
+        </div>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <div class="page-content">
+            <h1>✨ MUGISHA Abigail Eunice</h1>
+            <p class="hero-subtitle">Web Developer & Designer</p>
+            <p class="hero-description">I am MUGISHA Abigail Eunice, a student from MYP2 at NLS. I am passionate about creating new things and learning from my mistakes. A proud learner at NLS, exploring the world of web development, coding, and design!</p>
+            
+            <div class="cta-buttons">
+                <a href="#" class="cta-btn" onclick="showPage('about'); return false;">Learn More About Me 👋</a>
+                <a href="#" class="cta-btn" onclick="showPage('projects'); return false;">View My Projects 🚀</a>
+            </div>
+
+            <!-- HOME CAROUSEL -->
+            <h2>My Highlights 🌟</h2>
+            <div class="carousel-container">
+                <div class="carousel" data-carousel="home-carousel">
+                    <div class="carousel-slide active">
+                        <div class="emoji">💻</div>
+                        <h3>Web Developer</h3>
+                        <p>Creating beautiful and functional websites using HTML, CSS, and JavaScript.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">🎨</div>
+                        <h3>Designer</h3>
+                        <p>Designing user-friendly interfaces that look amazing and work perfectly.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">🧠</div>
+                        <h3>Problem Solver</h3>
+                        <p>I love solving problems and thinking critically to find creative solutions.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">📚</div>
+                        <h3>Lifelong Learner</h3>
+                        <p>Always eager to learn new things and improve my skills every day.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">🌍</div>
+                        <h3>Passionate Creator</h3>
+                        <p>Creating things that help people and make a positive impact in the world.</p>
+                    </div>
+                    <button class="carousel-button prev" onclick="changeSlide('home-carousel', -1)">❮</button>
+                    <button class="carousel-button next" onclick="changeSlide('home-carousel', 1)">❯</button>
+                </div>
+                <div class="carousel-controls">
+                    <span class="carousel-dot active" onclick="currentSlide('home-carousel', 0)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('home-carousel', 1)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('home-carousel', 2)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('home-carousel', 3)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('home-carousel', 4)"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT ME PAGE -->
+    <div id="about" class="page">
+        <div class="page-content">
+            <h1>👤 About Me</h1>
+            <p>I am passionate about creating new things and actually like to learn from my mistakes. I am a proud learner who studies at NLS. My favourite subjects are Maths, Science and English. I enjoy reading books and swimming, playing basketball and interacting with my friends. I try to do things like playing football, coding, robotics and dance.</p>
+
+            <!-- ABOUT CAROUSEL -->
+            <h2>My Skills 🎯</h2>
+            <div class="carousel-container">
+                <div class="carousel" data-carousel="about-carousel">
+                    <div class="carousel-slide active">
+                        <div class="emoji">👨‍💻</div>
+                        <h3>Basic Coder</h3>
+                        <p>Coding is one of my favourite interests because it helps us learn from our mistakes and become young coders with great career advantages.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">🏊</div>
+                        <h3>Beginner Swimmer</h3>
+                        <p>Swimming is one of my favourites because I learn many swimming strokes and techniques that might help me in the future.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">💃</div>
+                        <h3>Trained Dancer</h3>
+                        <p>I am a trained dancer but more like a beginner because it has only been one year since I started dancing.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">🧠</div>
+                        <h3>Problem Solving</h3>
+                        <p>I like to solve problems and that's where I found the idea of my first project. Problem solving is really important in tests.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">💭</div>
+                        <h3>Critical Thinker</h3>
+                        <p>Critical thinking goes hand in hand with problem solving because both are about solving problems by thinking critically.</p>
+                    </div>
+                    <button class="carousel-button prev" onclick="changeSlide('about-carousel', -1)">❮</button>
+                    <button class="carousel-button next" onclick="changeSlide('about-carousel', 1)">❯</button>
+                </div>
+                <div class="carousel-controls">
+                    <span class="carousel-dot active" onclick="currentSlide('about-carousel', 0)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('about-carousel', 1)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('about-carousel', 2)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('about-carousel', 3)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('about-carousel', 4)"></span>
+                </div>
+            </div>
+
+            <!-- INTERESTS CAROUSEL -->
+            <h2>My Interests & Hobbies 🎨</h2>
+            <div class="carousel-container">
+                <div class="carousel" data-carousel="interests-carousel">
+                    <div class="carousel-slide active">
+                        <div class="emoji">📚</div>
+                        <h3>Reading Books</h3>
+                        <p>I love reading books because they expand my knowledge and imagination.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">🏊</div>
+                        <h3>Swimming</h3>
+                        <p>Swimming keeps me active, healthy, and helps me relax after a busy day.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">📖</div>
+                        <h3>Learning New Things</h3>
+                        <p>I am always eager to learn new skills and explore different subjects.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">🧠</div>
+                        <h3>Problem Solving</h3>
+                        <p>Solving puzzles and problems is both fun and mentally stimulating for me.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">💻</div>
+                        <h3>Web Development</h3>
+                        <p>Creating websites and web applications is my passion and career goal.</p>
+                    </div>
+                    <button class="carousel-button prev" onclick="changeSlide('interests-carousel', -1)">❮</button>
+                    <button class="carousel-button next" onclick="changeSlide('interests-carousel', 1)">❯</button>
+                </div>
+                <div class="carousel-controls">
+                    <span class="carousel-dot active" onclick="currentSlide('interests-carousel', 0)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('interests-carousel', 1)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('interests-carousel', 2)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('interests-carousel', 3)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('interests-carousel', 4)"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WEBSITES PAGE -->
+    <div id="websites" class="page">
+        <div class="page-content">
+            <h1>🌐 My Favorite Websites</h1>
+            <p>Here are some websites that inspire me and help me learn new skills!</p>
+
+            <!-- Codepen, FlintWEBSITES CAROUSEL -->
+            <div class="carousel-container">
+                <div class="carousel" data-carousel="websites-carousel">
+                    <div class="carousel-slide active">
+                        <div class="emoji">🔍</div>
+                        <h3>Google</h3>
+                        <p>Google helps me search for information and learn about different topics.</p>
+                        <a href="https://www.google.com" target="_blank" class="card-link">Visit Website →</a>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">📖</div>
+                        <h3>Wikipedia</h3>
+                        <p>Wikipedia is great for learning and getting brief information about any topic.</p>
+                        <a href="https://www.wikipedia.org" target="_blank" class="card-link">Visit Website →</a>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">💻</div>
+                        <h3>CodePen</h3>
+                        <p>CodePen is perfect for practicing coding and creating amazing web projects.</p>
+                        <a href="https://codepen.io" target="_blank" class="card-link">Visit Website →</a>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">🎓</div>
+                        <h3>Khan Academy</h3>
+                        <p>Khan Academy offers free courses on many subjects including coding and design.</p>
+                        <a href="https://www.khanacademy.org" target="_blank" class="card-link">Visit Website →</a>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">🚀</div>
+                        <h3>GitHub</h3>
+                        <p>GitHub is where developers share code and collaborate on amazing projects.</p>
+                        <a href="https://www.github.com" target="_blank" class="card-link">Visit Website →</a>
+                    </div>
+                    <button class="carousel-button prev" onclick="changeSlide('websites-carousel', -1)">❮</button>
+                    <button class="carousel-button next" onclick="changeSlide('websites-carousel', 1)">❯</button>
+                </div>
+                <div class="carousel-controls">
+                    <span class="carousel-dot active" onclick="currentSlide('websites-carousel', 0)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('websites-carousel', 1)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('websites-carousel', 2)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('websites-carousel', 3)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('websites-carousel', 4)"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECTS PAGE -->
+    <div id="projects" class="page">
+        <div class="page-content">
+            <h1>💼 My Projects</h1>
+            <p>Here are some of my exciting projects that I'm working on!</p>
+
+            <!-- PROJECTS CAROUSEL -->
+            <div class="carousel-container">
+                <div class="carousel" data-carousel="projects-carousel">
+                    <div class="carousel-slide active">
+                        <div class="emoji">🧠</div>
+                        <h3>Critical Thinking Website</h3>
+                        <p><strong>Description:</strong> A website that helps students improve their critical thinking and problem solving skills through questions, puzzles and tests.</p>
+                        <p><strong>Features:</strong> Login/Sign up, Lessons, Tests, Progress Tracking</p>
+                        <p><strong>Status:</strong> ✅ In Development</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">📚</div>
+                        <h3>Vocabulary Learning App</h3>
+                        <p><strong>Description:</strong> An app designed to help people learn new vocabularies and speak correctly and fluently.</p>
+                        <p><strong>Features:</strong> New Topics, Short Tests, Progress Tracking, Pronunciation Guide</p>
+                        <p><strong>Status:</strong> ✅ In Development</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">🎨</div>
+                        <h3>Portfolio Website</h3>
+                        <p><strong>Description:</strong> My personal portfolio website showcasing my skills, projects, and interests.</p>
+                        <p><strong>Skills Used:</strong> HTML, CSS, JavaScript</p>
+                        <p><strong>Status:</strong> ✅ Completed</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">🌐</div>
+                        <h3>Web Design Project</h3>
+                        <p><strong>Description:</strong> A responsive website with modern design and user-friendly interface.</p>
+                        <p><strong>Skills Used:</strong> HTML, CSS, Responsive Design</p>
+                        <p><strong>Status:</strong> ✅ Completed</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">🚀</div>
+                        <h3>Coming Soon...</h3>
+                        <p><strong>Description:</strong> More exciting projects coming soon as I continue learning and growing!</p>
+                        <p><strong>Skills:</strong> Advanced JavaScript, Web APIs, Databases</p>
+                        <p><strong>Status:</strong> 🔄 Planning Phase</p>
+                    </div>
+                    <button class="carousel-button prev" onclick="changeSlide('projects-carousel', -1)">❮</button>
+                    <button class="carousel-button next" onclick="changeSlide('projects-carousel', 1)">❯</button>
+                </div>
+                <div class="carousel-controls">
+                    <span class="carousel-dot active" onclick="currentSlide('projects-carousel', 0)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('projects-carousel', 1)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('projects-carousel', 2)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('projects-carousel', 3)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('projects-carousel', 4)"></span>
+                </div>
+            </div>
+
+            <!-- INSPIRATIONAL QUOTES -->
+            <h2>✨ Inspirational Quotes</h2>
+            <div class="quotes-container">
+                <div class="quote-card">
+                    <p>💭 "I am passionate to create new things and actually like to learn from my mistakes."</p>
+                </div>
+                <div class="quote-card">
+                    <p>💭 "The only way to do great work is to love what you do." - Steve Jobs</p>
+                </div>
+                <div class="quote-card">
+                    <p>💭 "Success is not final, failure is not fatal." - Winston Churchill</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="contact" class="page">
+        <div class="page-content">
+            <h1>📧 Contact Me</h1>
+            <p>Feel free to reach out to me! I'd love to hear from you.</p>
+
+            <!-- CONTACT CAROUSEL -->
+            <div class="carousel-container">
+                <div class="carousel" data-carousel="contact-carousel">
+                    <div class="carousel-slide active">
+                        <div class="emoji">📧</div>
+                        <h3>Email</h3>
+                        <p>You can reach me via email for any inquiries or collaborations!</p>
+                        <p><a href="mailto:mugisha.eunice@ntare-louisenlund.org">mugisha.eunice@ntare-louisenlund.org</a></p>
+                    </div>
+                    <div class="carousel-slide">
+                      
+                      or you can even call me on my phone number : 0796706317
+                        <div class="emoji">🏫</div>
+                        <h3>School</h3>
+                        <p>I'm a proud student at Ntare Louisenlund School (NLS), where I'm learning and growing every day!</p>
+                        <p>Ntare Louisenlund School</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">💼</div>
+                        <h3>Collaboration</h3>
+                        <p>I'm always open to collaborating on interesting projects and learning opportunities!</p>
+                        <p>Let's create something amazing together!</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">🌍</div>
+                        <h3>Location</h3>
+                        <p>Based in Rwanda, passionate about connecting with people around the world!</p>
+                        <p>Let's stay connected!</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">🚀</div>
+                        <h3>Let's Connect</h3>
+                        <p>Whether you have a project idea, want to collaborate, or just want to chat - I'm here!</p>
+                        <p>Looking forward to hearing from you!</p>
+                    </div>
+                    <button class="carousel-button prev" onclick="changeSlide('contact-carousel', -1)">❮</button>
+                    <button class="carousel-button next" onclick="changeSlide('contact-carousel', 1)">❯</button>
+                </div>
+                <div class="carousel-controls">
+                    <span class="carousel-dot active" onclick="currentSlide('contact-carousel', 0)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('contact-carousel', 1)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('contact-carousel', 2)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('contact-carousel', 3)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('contact-carousel', 4)"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 MUGISHA Abigail Eunice. All rights reserved. | Building the future, one website at a time! 💜</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
